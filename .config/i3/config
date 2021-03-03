@@ -399,7 +399,7 @@ exec_always --no-startup-id autotiling
 #for_window [class="Spotify"] focus
 
 # Desktop notifications_
-exec --no-startup-id /usr/bin/dunst
+exec_always --no-startup-id /usr/bin/dunst
 
 # TRAY APPLICATIONS
 
@@ -641,7 +641,7 @@ new_float normal
 # want it
 
 
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 3
 gaps inner 15
 gaps outer 15
 #smart_gaps on
@@ -684,7 +684,7 @@ bindsym $mod+Shift+o		gaps outer current minus 5
 
 #exec_always betterlockscreen -u /usr/share/backgrounds/archlinux/landscape.jpg -r 1920x1080 -b 0.5
 
-bindsym $mod+shift+x exec betterlockscreen -l
+bindsym $mod+shift+x exec --no-startup-id betterlockscreen -l
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
