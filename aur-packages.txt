@@ -1,0 +1,10 @@
+autotiling
+betterlockscreen
+brave-bin
+cava
+expressvpn
+mailspring
+polybar
+timeshift
+visual-studio-code-bin
+yay
