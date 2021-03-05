@@ -98,6 +98,7 @@ pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
 pyenv
+rofi
 rsync
 sdl_ttf
 sudo

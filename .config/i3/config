@@ -225,7 +225,7 @@ bindsym $mod+Shift+Right move right
 
 # next/previous workspace
 
-bindsym Mod1+Tab workspace next
+#bindsym Mod1+Tab workspace next
 bindsym Mod1+Shift+Tab workspace prev
 bindsym $mod+Tab workspace back_and_forth
 
@@ -566,6 +566,8 @@ exec --no-startup-id xset -dpms
 # start a terminal
 bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
+bindsym $mod1+Return exec --no-startup-id alacritty
+
 
 #brave
 bindsym control+mod1+b exec --no-startup-id brave
@@ -728,3 +730,18 @@ bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed 
 #####################################################################################################################
 #################                                                                                   #################
 #####################################################################################################################
+#####################################
+# Application menu handled by rofi: #
+#####################################
+
+## rofi bindings fancy application menu (two bindings F9/$mod+d)
+                
+bindsym F9 exec --no-startup-id  rofi -modi drun -show drun -display-drun "Apps : " -line-padding 4 \
+                -columns 2 -padding 30 -hide-scrollbar \
+                -show-icons -drun-icon-theme "Arc-X-D" -font "Noto Sans Regular 11"
+
+## rofi bindings for window menu (two bindings F10/$mod+t)
+
+bindsym $mod1+Tab exec --no-startup-id  rofi -show window -display-window "Window : " -line-padding 4 \
+                -lines 10 -padding 50 -hide-scrollbar \
+                -show-icons -drun-icon-theme "Arc-X-D" -font "Noto Sans Regular 11"
