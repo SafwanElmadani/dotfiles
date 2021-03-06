@@ -16,7 +16,7 @@
 
 # set the x y block size, the width and height of an individual block composing
 # the clock
-block 2 1
+block 6 2
 # block-x 2
 # block-y 1
 
@@ -35,19 +35,19 @@ margin 0 0
 # set the x y ratio size, auto adjust the clock to conform to a specific
 # aspect ratio, keep in mind that a square ratio would be '2 1' due to a
 # terminal character cell having a height around twice the size of its width
-ratio 2 1
+ratio 3 2
 # ratio-x 2
 # ratio-y 1
 
 # set the padding size between the date and the clock
-date-padding 1
+date-padding 3
 
 # set the string value used to fill the active, inactive, and colon blocks of
 # the clock, an empty string clears the value
 fill ''
 # fill-active ''
 # fill-inactive ''
-# fill-colon ''
+ fill-colon ''
 
 # set the locale, for example 'en_CA.utf8', an empty string clears the value
 locale ''
@@ -57,7 +57,7 @@ locale ''
 timezone ''
 
 # set the date format string, an empty string clears the value
-date '%a %b %d'
+date '%a %b %d, %Y'
 
 # set the mode type
 # select one of:
@@ -106,7 +106,7 @@ rate-status 5000
 set hour-24 on
 
 # display seconds
-set seconds off
+set seconds on
 
 # display the date
 set date on
@@ -142,7 +142,7 @@ set auto-ratio on
 
 # set the style of the text set by the command 'fill' used to draw active
 # blocks in the clock
-style active-fg clear
+style active-fg #DE8A79
 
 # set the style of the text set by the command 'fill' used to draw inactive
 # blocks in the clock
@@ -159,10 +159,10 @@ style active-bg reverse
 style inactive-bg clear
 
 # set the style of the background used to draw colon blocks in the clock
-style colon-bg clear
+style colon-bg #DE8A79
 
 # set the style of the date
-style date clear
+style date #DE8A79
 
 # set the style of the background
 style background clear
