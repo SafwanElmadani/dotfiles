@@ -84,6 +84,7 @@ nvidia
 nvidia-dkms
 nvidia-settings
 obs-studio
+openconnect
 openssh
 os-prober
 otf-font-awesome
@@ -94,6 +95,7 @@ patch
 pavucontrol
 picom
 pkgconf
+polkit-gnome
 pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
@@ -101,6 +103,7 @@ pyenv
 rofi
 rsync
 sdl_ttf
+signal-desktop
 sudo
 terminator
 texinfo
