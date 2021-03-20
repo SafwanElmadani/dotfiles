@@ -93,16 +93,38 @@ exec --no-startup-id xrandr --output DVI-D-0 --off --output HDMI-0 --off --outpu
 set $firstMonitor DP-4
 set $secondMonitor DP-0
 
+set $WS11 11
+set $WS12 12
+set $WS13 13
+set $WS14 14
+set $WS15 15
+set $WS16 16
+set $WS17 17
+set $WS18 18
+set $WS19 19
+set $WS20 20
+
 workspace 1 output $firstMonitor
 workspace 2 output $firstMonitor
 workspace 3 output $firstMonitor
 workspace 4 output $firstMonitor
 workspace 5 output $firstMonitor
-workspace 6 output $secondMonitor
-workspace 7 output $secondMonitor
-workspace 8 output $secondMonitor
-workspace 9 output $secondMonitor
-workspace 10 output $secondMonitor
+workspace 6 output $firstMonitor
+workspace 7 output $firstMonitor
+workspace 8 output $firstMonitor
+workspace 9 output $firstMonitor
+workspace 10 output $firstMonitor
+
+workspace $WS11 output $secondMonitor
+workspace $WS12 output $secondMonitor
+workspace $WS13 output $secondMonitor
+workspace $WS14 output $secondMonitor
+workspace $WS15 output $secondMonitor
+workspace $WS16 output $secondMonitor
+workspace $WS17 output $secondMonitor
+workspace $WS18 output $secondMonitor
+workspace $WS19 output $secondMonitor
+workspace $WS20 output $secondMonitor
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -116,6 +138,17 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
+bindsym $mod1+1 workspace $WS11
+bindsym $mod1+2 workspace $WS12
+bindsym $mod1+3 workspace $WS13
+bindsym $mod1+4 workspace $WS14
+bindsym $mod1+5 workspace $WS15
+bindsym $mod1+6 workspace $WS16
+bindsym $mod1+7 workspace $WS17
+bindsym $mod1+8 workspace $WS18
+bindsym $mod1+9 workspace $WS19
+bindsym $mod1+0 workspace $WS20
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1; workspace 1
 bindsym $mod+Shift+2 move container to workspace 2; workspace 2
@@ -128,6 +161,16 @@ bindsym $mod+Shift+8 move container to workspace 8; workspace 8
 bindsym $mod+Shift+9 move container to workspace 9; workspace 9
 bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 
+bindsym $mod1+Shift+1 move container to workspace $WS11; workspace $WS11
+bindsym $mod1+Shift+2 move container to workspace $WS12; workspace $WS12
+bindsym $mod1+Shift+3 move container to workspace $WS13; workspace $WS13
+bindsym $mod1+Shift+4 move container to workspace $WS14; workspace $WS14
+bindsym $mod1+Shift+5 move container to workspace $WS15; workspace $WS15
+bindsym $mod1+Shift+6 move container to workspace $WS16; workspace $WS16
+bindsym $mod1+Shift+7 move container to workspace $WS17; workspace $WS17
+bindsym $mod1+Shift+8 move container to workspace $WS18; workspace $WS18
+bindsym $mod1+Shift+9 move container to workspace $WS19; workspace $WS19
+bindsym $mod1+Shift+0 move container to workspace $WS20; workspace $WS20
 
 
 
@@ -604,13 +647,13 @@ bindsym control+mod1+f exec --no-startup-id flameshot gui
 #virtualbox
 bindsym control+mod1+v exec --no-startup-id virtualbox
 
-for_window [class="Brave-browser"] move container to workspace 6; workspace 6
+for_window [class="Brave-browser"] move container to workspace $WS11; workspace $WS11
 
 for_window [class="Slack"] move container to workspace 1; workspace 1
 
-for_window [class="zoom"] move container to workspace 10; workspace 10
+for_window [class="zoom"] move container to workspace $WS20; workspace $WS20
 
-for_window [class="VirtualBox Manager"] move container to workspace 9; workspace 9
+for_window [class="VirtualBox Manager"] move container to workspace $WS19; workspace $WS19
 
 
 #####################################################################################################################
