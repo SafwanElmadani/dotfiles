@@ -69,7 +69,7 @@ exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 #exec --no-startup-id xrandr --output DVI-1 --right-of DVI-0 --auto
 #exec --no-startup-id xrandr --output DVI-D-1 --right-of DVI-I-1 --auto
 #exec --no-startup-id xrandr --output HDMI-2 --right-of HDMI-1 --auto
-#exec --no-startup-id xrandr --output DP-0 --right-of DP-4 --auto
+exec --no-startup-id xrandr --output DVI-D-0 --off --output HDMI-0 --off --output DP-0 --mode 1920x1080 --rate 60.00 --pos 1920x0 --rotate normal --output DP-1 --off --output DP-2 --off --output DP-3 --off --output DP-4 --primary --mode 1920x1080 --rate 144.00 --pos 0x0 --rotate normal --output DP-5 --off
 
 
 # my current setup
@@ -633,6 +633,7 @@ for_window [class="VirtualBox Manager"] move container to workspace 9; workspace
 
 #for_window [class="Blueberry.py"] floating enable
 for_window [class="obs"] floating enable
+for_window [class="MATLAB R2021a - academic use"] floating enable
 
 
 #####################################################################################################################
@@ -673,7 +674,7 @@ new_float normal
 # want it
 
 
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 2
 gaps inner 15
 gaps outer 15
 #smart_gaps on
@@ -749,3 +750,25 @@ bindsym F9 exec --no-startup-id  rofi -modi drun -show drun -display-drun "Apps 
 bindsym $mod1+Tab exec --no-startup-id  rofi -show window -display-window "Window : " -line-padding 4 \
                 -lines 10 -padding 50 -hide-scrollbar \
                 -show-icons -drun-icon-theme "Arc-X-D" -font "Noto Sans Regular 11"
+
+
+#borders colors
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #4c7899 #285577 #ffffff #754160   #CC0000
+client.focused_inactive #333333 #5f676a #ffffff #754160   #CC0000
+client.unfocused        #333333 #222222 #888888 #754160   #CC0000
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
+
+
+
+#popup windows
+for_window [window_role="pop-up"]                       floating enable
+for_window [window_role="bubble"]                       floating enable 
+for_window [window_role="task_dialog"]                  floating enable
+for_window [window_role="Preferences"]                  floating enable
+for_window [window_type="dialog"]                       floating enable 
+for_window [window_type="menu"]                         floating enable

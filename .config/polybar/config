@@ -10,7 +10,6 @@
 ;   https://github.com/jaagr/polybar/wiki/Formatting
 ;
 ;=====================================================
-
 [global/wm]
 ;https://github.com/jaagr/polybar/wiki/Configuration#global-wm-settings
 margin-top = 0
@@ -1189,8 +1188,8 @@ label-mode-background = #FFBB00
 ; Default: %icon%  %name%
 ; focused = Active workspace on focused monitor
 label-focused = %icon% %name%
-label-focused-background = ${colors.background}
-label-focused-foreground = ${colors.foreground}
+label-focused-background =  
+label-focused-foreground = #754160
 label-focused-underline = #6790eb
 label-focused-padding = 2
 
