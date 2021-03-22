@@ -72,6 +72,26 @@ exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 exec --no-startup-id xrandr --output DVI-D-0 --off --output HDMI-0 --off --output DP-0 --mode 1920x1080 --rate 60.00 --pos 1920x0 --rotate normal --output DP-1 --off --output DP-2 --off --output DP-3 --off --output DP-4 --primary --mode 1920x1080 --rate 144.00 --pos 0x0 --rotate normal --output DP-5 --off
 
 
+#####################################################################################################################
+#################                          i3 gaps next                                             #################
+#####################################################################################################################
+
+# Settings for I3 next gap git
+# https://github.com/Airblader/i3/tree/gaps-next
+# delete or uncomment the following lines if you do not have it or do not
+# want it
+
+
+for_window [class="^.*"] border pixel 2
+gaps inner 12
+gaps outer 12
+#smart_gaps on
+#smart_borders on
+#gaps bottom 48
+
+
+
+
 # my current setup
 
 #set $firstMonitor DP3
@@ -707,25 +727,6 @@ new_window normal
 new_float normal
 #new_float none
 
-#####################################################################################################################
-#################                          i3 gaps next                                             #################
-#####################################################################################################################
-
-# Settings for I3 next gap git
-# https://github.com/Airblader/i3/tree/gaps-next
-# delete or uncomment the following lines if you do not have it or do not
-# want it
-
-
-for_window [class="^.*"] border pixel 2
-gaps inner 15
-gaps outer 15
-#smart_gaps on
-#smart_borders on
-
-
-
-
 
 #####################################################################################################################
 #################                          i3 gaps change                                           #################
@@ -798,9 +799,9 @@ bindsym $mod1+Tab exec --no-startup-id  rofi -show window -display-window "Windo
 #borders colors
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff #754160   #CC0000
-client.focused_inactive #333333 #5f676a #ffffff #754160   #CC0000
-client.unfocused        #333333 #222222 #888888 #754160   #CC0000
+client.focused          #CC0000 #285577 #ffffff #754160   #CC0000
+client.focused_inactive #CC0000 #5f676a #ffffff #754160   #CC0000
+client.unfocused        #CC0000 #222222 #888888 #754160   #CC0000
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 

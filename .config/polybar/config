@@ -81,8 +81,13 @@ monitor-strict = false
 override-redirect = false
 bottom = true
 fixed-center = true
+;width change the width of the bar from right side.
+;then use xoffset to shift the bar to the right in x direction
+;width = 100%:-57  
 width = 100%
 height = 30
+;offset-x = 28
+;offset-y = 9
 ;offset-x = 1%
 ;offset-y = 1%
 
@@ -93,7 +98,7 @@ foreground = ${colors.foreground}
 ;   background-[0-9]+ = #aarrggbb
 ;background-0 =
 
-radius = 0.0
+;radius = 6.0
 line-size = 2
 line-color = #000000
 
@@ -107,8 +112,8 @@ border-color = #000000
 padding-left = 1
 padding-right = 1
 
-module-margin-left = 3
-module-margin-right = 3
+module-margin-left = 1
+module-margin-right = 1
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Noto Sans:size=10;0"
