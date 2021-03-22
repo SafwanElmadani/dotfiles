@@ -46,8 +46,8 @@
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   #padding:
-  #  x: 0
-  #  y: 0
+     #x: 0
+    # y: 0
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -101,6 +101,26 @@
   # Scrolling distance multiplier.
   #multiplier: 3
 
+# Font configuration (changes require restart)
+font:
+  # The normal (roman) font face to use.
+  normal:
+    family: Ubuntu Mono
+    # Style can be specified to pick a specific face.
+    style: Regular
+
+  # The bold font face
+  bold:
+    family: Ubuntu Mono
+    # Style can be specified to pick a specific face.
+    style: Bold
+
+  # The italic font face
+  italic:
+    family: Ubuntu Mono
+    # Style can be specified to pick a specific face.
+    style: Italic
+  size: 14.0
 # Font configuration
 #font:
   # Normal (roman) font face
@@ -150,7 +170,7 @@
     #style: Bold Italic
 
   # Point size
-  #size: 11.0
+#size: 14.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -179,8 +199,8 @@
 colors:
   # Default colors
   primary:
-    background: '#242424'
-    foreground: '#FFFFFF'
+    background: '#000000'
+    foreground: '#ffffff'
 
     # Bright and dim foreground colors
     #
@@ -341,7 +361,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.7
+background_opacity: 0.8
 
 #selection:
   # This string contains all characters that are used as separators for
