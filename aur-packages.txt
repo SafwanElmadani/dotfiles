@@ -3,7 +3,9 @@ betterlockscreen
 brave-bin
 cava
 expressvpn
+libxft-bgra
 mailspring
+nvidia-container-toolkit
 polybar
 timeshift
 visual-studio-code-bin

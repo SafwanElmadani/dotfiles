@@ -5,6 +5,7 @@ picom --config ~/.config/i3/picom.conf &
 
 xrandr --output DVI-D-0 --off --output HDMI-0 --off --output DP-0 --mode 1920x1080 --rate 60.00 --pos 1920x0 --rotate normal --output DP-1 --off --output DP-2 --off --output DP-3 --off --output DP-4 --primary --mode 1920x1080 --rate 144.00 --pos 0x0 --rotate normal --output DP-5 --off &
 
+
 dunst &
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
@@ -25,4 +26,15 @@ xset s off &
 
 xset -dpms &
 
+dwmblocks &
 
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+#while true; do
+#   xsetroot -name "$( date +" %h %d, %Y %I:%M %p" )"
+#   sleep 1m    # Update time every minute
+#done &
+
+#while true; do
+#    dwm >/dev/null 2>&1
+#done

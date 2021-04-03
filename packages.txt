@@ -28,6 +28,7 @@ dialog
 discord
 dmenu
 dmidecode
+docker
 dosfstools
 dunst
 efibootmgr
@@ -52,6 +53,7 @@ gptfdisk
 groff
 grub
 gsfonts
+gsimplecal
 haveged
 hplip
 htop
@@ -117,6 +119,8 @@ transmission-gtk
 ttf-bitstream-vera
 ttf-dejavu
 ttf-font-awesome
+ttf-inconsolata
+ttf-joypixels
 ttf-liberation
 ttf-ubuntu-font-family
 udiskie
@@ -212,4 +216,8 @@ xorg-xwud
 xournalpp
 xss-lock
 zip
+zsh
+zsh-autosuggestions
+zsh-completions
+zsh-syntax-highlighting
 zvbi
