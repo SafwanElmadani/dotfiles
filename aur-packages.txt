@@ -1,11 +1,16 @@
+autofs
 autotiling
 betterlockscreen
 brave-bin
 cava
 expressvpn
+font-bh-ttf
+google-chrome
+lf
 libxft-bgra
 mailspring
 nvidia-container-toolkit
+paru
 polybar
 timeshift
 visual-studio-code-bin

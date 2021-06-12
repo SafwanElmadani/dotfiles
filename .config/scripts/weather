@@ -1,0 +1,8 @@
+#!/bin/bash
+
+WEA=$(curl -s wttr.in/85705?format=%t)
+
+ICON="⛅️"
+
+printf "[%s %s]\n" "$ICON" "$WEA"
+
