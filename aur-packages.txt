@@ -6,11 +6,11 @@ cava
 expressvpn
 font-bh-ttf
 google-chrome
-lf
 libxft-bgra
 mailspring
 nvidia-container-toolkit
-paru
+optimus-manager
+optimus-manager-qt
 polybar
 timeshift
 visual-studio-code-bin
