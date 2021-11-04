@@ -1,8 +1,20 @@
 #!/bin/sh
 
-updatesarch="$(checkupdates 2> /dev/null | wc -l)"
-updatesaur="$(yay -Qum 2> /dev/null | wc -l)"
-updates=$(("$updatesarch" + "$updatesaur"))
+# updatesarch="$(checkupdates 2> /dev/null | wc -l)"
+# updatesaur="$(yay -Qum 2> /dev/null | wc -l)"
+# updates=$(("$updatesarch" + "$updatesaur"))
+# icon="🛠️"
+# printf "[%s %s]\\n"  "$icon" "$updates"
+
+
+VAR=$(dnf check-update --refresh)
+updatesarch="$(echo "$VAR" | wc -l)" #total number of lines including whitespace
+index="$(echo "$VAR" | sed -n '/^$/=')" #line number of the seperating whitespace
+if [ -z "$index" ]
+then
+      updatesarch=0
+      index=0
+fi
+updates=$(("$updatesarch" - "$index"))
 icon="🛠️"
 printf "[%s %s]\\n"  "$icon" "$updates"
-

@@ -1,4 +1,14 @@
 #! /bin/bash 
 
-kern="$(uname -r)"
-echo -e "[🐧 $kern]"
+# kern="$(uname -r)"
+# echo -e "[🐧 $kern]"
+
+#! /bin/bash 
+
+str=$(echo $(uname -r))
+
+str2=${str//.fc/#}
+
+IFS="#"
+echo "$str2" | (read -ra var1; echo -e "[🐧$var1]")
+
