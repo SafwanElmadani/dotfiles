@@ -1,5 +1,6 @@
 #start neofetch
-neofetch
+#neofetch
+macchina
 # Enable colors and change prompt:
 autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
@@ -7,7 +8,14 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 # # History in cache directory:
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=~/.cache/zsh/history
+HISTFILE=~/.zsh_history
+
+autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
+[[ -n "${key[Up]}"   ]] && bindkey -- "${key[Up]}"   up-line-or-beginning-search
+[[ -n "${key[Down]}" ]] && bindkey -- "${key[Down]}" down-line-or-beginning-search
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -59,8 +67,10 @@ alias ll='ls -ltr --color=auto'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias py3.8='pyenv shell 3.8.6'
 alias ve3.8='source /home/safwan/virenv/base3.8/bin/activate'
-
-
+alias qtgui='source /home/safwan/virenv/qtgui/bin/activate'
+alias v='nvim'
+alias sus='systemctl suspend'
+alias mac_pro='ssh safwan@192.168.1.6'
 
 # Load zsh-syntax-highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
@@ -75,7 +85,7 @@ eval "$(pyenv init -)"
 eval "$(starship init zsh)"
 
 
-
+autoload -Uz bashcompinit && bashcompinit
 
 
 
