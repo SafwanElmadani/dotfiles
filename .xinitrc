@@ -11,7 +11,8 @@ dunst &
 
 udiskie &
 
-blueman-tray &
+blueman-applet &
+#blueman-tray &
 
 nm-applet &
 
@@ -48,3 +49,4 @@ export BROWSER="/usr/bin/brave"
             # No error logging
 exec dwm >/dev/null 2>&1
 #done
+
