@@ -6,6 +6,7 @@ nitrogen --restore &
 
 picom --config ~/.config/i3/picom.conf &
 
+#for nvidia
 #xrandr --setprovideroutputsource modesetting NVIDIA-0
 #xrandr --auto
 #/etc/lightdm/display_setup.sh &
@@ -16,7 +17,8 @@ dunst &
 
 udiskie &
 
-blueman-tray &
+blueman-applet &
+#blueman-tray &
 
 nm-applet &
 
