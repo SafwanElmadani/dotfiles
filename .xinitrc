@@ -1,7 +1,5 @@
 #!/usr/bin/sh
 
-. /etc/X11/xinit/xinitrc-common
-
 nitrogen --restore &
 
 picom --config ~/.config/i3/picom.conf &
@@ -13,7 +11,7 @@ picom --config ~/.config/i3/picom.conf &
 
 dunst &
 
-/usr/libexec/polkit-gnome-authentication-agent-1 &
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
 udiskie &
 
@@ -32,7 +30,7 @@ volumeicon &
 
 # xset -dpms &
 
-xscreensaver --no-splash  &
+# xscreensaver --no-splash  &
 
 dwmblocks &
 
