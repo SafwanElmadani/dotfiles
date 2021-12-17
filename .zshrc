@@ -165,6 +165,7 @@ alias tux11='ssh s4fw4n@tux11.tuc.stglabs.ibm.com -X'
 alias v=nvim
 alias vlsi2='ssh safwan@vlsi2.tuc.stglabs.ibm.com'
 alias vlsi1='ssh safwan@9.11.234.59'
+alias mips04='ssh s4fw4n@tucmips04.tucson.ibm.com'
 
 #python versions
 #export PYENV_ROOT="$HOME/.pyenv"
