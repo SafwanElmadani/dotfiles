@@ -1,3 +1,5 @@
+#export PATH="$HOME/.cargo/bin:$PATH"// moved to .zprofile
+macchina
 #start neofetch
 #pfetch
 # Enable colors and change prompt:
@@ -155,27 +157,27 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #aliases
-alias ls='ls --color=auto'
-alias ll='ls -ltr --color=auto'
-alias py3.8='pyenv shell 3.8.6'
-alias ve3.8='source /home/safwan/virenv/base3.8/bin/activate'
-alias saf_dir='sudo mount -t cifs -o vers=2.0,username=s4fw4n,uid=1000,gid=1000 //tucgsa/s4fw4n ~/Documents/servers/s4fw4n && cd ~/Documents/servers/s4fw4n'
-alias sb='sudo mount -t cifs -o vers=2.0,username=s4fw4n,uid=1000,gid=1000 //tucgsa/projects/t/tapes1/drvcode/devboxes/ext0/D3I2/pnh8A1_safwan_L7TmWork_tapedrv4328 /home/safwan/my_sandbox'
-alias tux11='ssh s4fw4n@tux11.tuc.stglabs.ibm.com -X'
-alias v=nvim
-alias vlsi2='ssh safwan@vlsi2.tuc.stglabs.ibm.com'
-alias vlsi1='ssh safwan@9.11.234.59'
-alias mips04='ssh s4fw4n@tucmips04.tucson.ibm.com'
+if [ -f /home/safwan/Documents/dotfiles/.zsh_aliases ]; then
+. /home/safwan/Documents/dotfiles/.zsh_aliases
+else 
+    echo "/home/safwan/Documents/dotfiles/.zsh_aliases does not exist."
+fi
+
+
+
+
+export TMOUT=0
+eval "$(starship init zsh)"
+
 
 #python versions
-#export PYENV_ROOT="$HOME/.pyenv"
-#export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
+#export PYENV_ROOT="$HOME/.pyenv" // moved to .zprofile
+#export PATH="$PYENV_ROOT/bin:$PATH" // moved to .zprofile
+# eval "$(pyenv init --path)" // moved to .zprofile
 eval "$(pyenv init -)"
 
 
-#export PATH="$HOME/.cargo/bin:$PATH"
-export TMOUT=0
-eval "$(starship init zsh)"
-macchina
+
+
+
 
