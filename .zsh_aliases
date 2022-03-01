@@ -7,6 +7,10 @@ alias saf_dir='sudo mount -t cifs -o vers=2.0,username=s4fw4n,uid=1000,gid=1000 
 alias sb1='sudo mount -t cifs -o vers=2.0,username=s4fw4n,uid=1000,gid=1000 //tucgsa/projects/t/tapes1/drvcode/devboxes/ext0/D3I2/pnh8A1_safwan_L7TmWork_tapedrv4328 /home/safwan/my_sandbox'
 alias sb2='sudo mount -t cifs -o vers=2.0,username=s4fw4n,uid=1000,gid=1000 //tucgsa/projects/t/tapes1/drvcode/devboxes/ext0/D3I2/se.pmg_8A1 /home/safwan/my_sandbox'
 
+alias tapes1='sudo mount -t cifs -o vers=2.0,username=s4fw4n,uid=1000,gid=1000 //tucgsa/projects/t/tapes1 /home/safwan/my_sandbox'
+
+alias drvcode='sudo mount -t cifs -o vers=2.0,username=s4fw4n,uid=1000,gid=1000 //tucgsa/projects/t/tapes1/drvcode /home/safwan/my_sandbox'
+
 alias tux11='ssh s4fw4n@tux11.tuc.stglabs.ibm.com -X'
 alias v=nvim
 alias vlsi2='ssh safwan@vlsi2.tuc.stglabs.ibm.com'

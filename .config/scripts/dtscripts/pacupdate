@@ -17,4 +17,4 @@ then
 fi
 updates=$(("$updatesarch" - "$index"))
 icon="🛠️"
-printf "[%s %s]\\n"  "$icon" "$updates"
+printf "[%s%s]\\n"  "$icon" "$updates"

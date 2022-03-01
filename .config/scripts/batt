@@ -8,15 +8,15 @@ ICON3="⚡"
 
 if [ "$STATUS" = "Charging" ]; then
 
-	echo "[$ICON2 $CAPA%]"
+	echo "[$ICON2$CAPA%]"
 	
 elif [ "$STATUS" = "Discharging" ]; then
 	
-	echo "[$ICON1 $CAPA%]"
+	echo "[$ICON1$CAPA%]"
 	
 elif [ "$STATUS" = "Full" ]; then
 	
-	echo "[$ICON3 $CAPA%]"
+	echo "[$ICON3$CAPA%]"
 	
 else 
 
