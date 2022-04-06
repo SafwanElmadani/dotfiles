@@ -7,15 +7,16 @@ nitrogen --restore &
 picom --config ~/.config/i3/picom.conf &
 
 #for nvidia
-#xrandr --setprovideroutputsource modesetting NVIDIA-0
-#xrandr --auto
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto 
 #/etc/lightdm/display_setup.sh &
+xrandr --dpi 96
 
 dunst &
 
 /usr/libexec/polkit-gnome-authentication-agent-1 &
 
-udiskie &
+udiskie -t &
 
 blueman-applet &
 #blueman-tray &
@@ -40,6 +41,9 @@ export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 export QT_QPA_PLATFORMTHEME=qt5ct
+
+eval $(gnome-keyring-daemon --start)
+export SSH_AUTH_SOCK
 
 #export $(dbus-launch)
 #while true; do
