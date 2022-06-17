@@ -13,6 +13,7 @@ alias tapes1='sudo mount -t cifs -o vers=2.0,username=s4fw4n,uid=1000,gid=1000 /
 alias drvcode='sudo mount -t cifs -o vers=2.0,username=s4fw4n,uid=1000,gid=1000 //tucgsa/projects/t/tapes1/drvcode /home/safwan/my_sandbox'
 
 alias tux11='ssh s4fw4n@tux11.tuc.stglabs.ibm.com -X'
+alias tux15='ssh s4fw4n@tux15.tuc.stglabs.ibm.com -X'
 alias v=nvim
 alias vlsi2='ssh safwan@vlsi2.tuc.stglabs.ibm.com'
 alias vlsi1='ssh safwan@9.11.234.59'
@@ -25,3 +26,5 @@ alias sb='cd /gsa/tucgsa/projects/t/tapes1/drvcode/devboxes/ext0/D3I2/pnh8A1_saf
 alias sct='cd /gsa/tucgsa/projects/t/tapes1/devtools/sct'
 alias ext0='cd /gsa/tucgsa/projects/t/tapes1/extboxes/ext0'
 alias links='cd /gsa/tucgsa/projects/t/tapes1/links' 
+
+alias glog='git log --graph --abbrev-commit --decorate --oneline'
