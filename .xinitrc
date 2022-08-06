@@ -7,10 +7,11 @@ nitrogen --restore &
 picom --config ~/.config/i3/picom.conf &
 
 #for nvidia
-xrandr --setprovideroutputsource modesetting NVIDIA-0
-xrandr --auto 
+xrandr --setprovideroutputsource modesetting NVIDIA-0 &
+xrandr --auto &
 #/etc/lightdm/display_setup.sh &
-xrandr --dpi 96
+xrandr --dpi 96 &
+#xrandr -s 1920x1080 &
 
 dunst &
 
@@ -54,3 +55,4 @@ export SSH_AUTH_SOCK
 #while true; do
 exec dwm
 #done
+

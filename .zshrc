@@ -176,7 +176,7 @@ eval "$(starship init zsh)"
 # eval "$(pyenv init --path)" // moved to .zprofile
 eval "$(pyenv init -)"
 
-
+. /usr/share/fzf/shell/key-bindings.zsh
 
 
 

@@ -25,6 +25,7 @@ alias drvcode='cd /gsa/tucgsa/projects/t/tapes1/drvcode'
 alias sb='cd /gsa/tucgsa/projects/t/tapes1/drvcode/devboxes/ext0/D3I2/pnh8A1_safwan_L7TmWork_tapedrv4328'
 alias sct='cd /gsa/tucgsa/projects/t/tapes1/devtools/sct'
 alias ext0='cd /gsa/tucgsa/projects/t/tapes1/extboxes/ext0'
-alias links='cd /gsa/tucgsa/projects/t/tapes1/links' 
+alias links='cd /gsa/tucgsa/projects/t/tapes1/links'
+alias v='nvim'
 
 alias glog='git log --graph --abbrev-commit --decorate --oneline'
