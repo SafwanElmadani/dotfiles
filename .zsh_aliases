@@ -29,3 +29,6 @@ alias links='cd /gsa/tucgsa/projects/t/tapes1/links'
 alias v='nvim'
 
 alias glog='git log --graph --abbrev-commit --decorate --oneline'
+
+source /home/safwan/.config/nvim/nvim_pop
+alias vpop='nvim_pop'

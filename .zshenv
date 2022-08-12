@@ -7,5 +7,5 @@
 export FZF_DEFAULT_COMMAND='find . -printf "%P\\n"'
 
 # To apply the command to CTRL-T as well
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_COMMAND='ag --hidden -l""'
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
