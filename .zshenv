@@ -8,7 +8,7 @@
 #Options
 #export FZF_DEFAULT_OPTS='--height 100% --border --preview "bat --color=always --style=numbers --line-range=:1000 {}"'
 # To apply the command to CTRL-T as well
-export FZF_CTRL_T_OPTS='--height 100% --border --preview "bat --color=always --style=numbers --line-range=:1000 {}"'
+export FZF_CTRL_T_OPTS='--height 100% --border --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 #export FZF_CTRL_T_COMMAND='ag --hidden -l ""'
 export FZF_CTRL_T_COMMAND='find ./ -printf "%P\\n"' #this is way faster
 #search only for directory

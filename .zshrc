@@ -1,5 +1,4 @@
 #export PATH="$HOME/.cargo/bin:$PATH"// moved to .zprofile
-macchina
 #start neofetch
 #pfetch
 # Enable colors and change prompt:
@@ -178,6 +177,5 @@ eval "$(pyenv init -)"
 
 . /usr/share/fzf/shell/key-bindings.zsh
 
-
-
+macchina
 
