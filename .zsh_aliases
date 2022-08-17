@@ -33,4 +33,4 @@ alias glog='git log --graph --abbrev-commit --decorate --oneline'
 source /home/safwan/.config/nvim/nvim_pop
 alias vpop='nvim_pop'
 alias fz='vpop $(find ./ -printf "%P\\n" | fzf --height 100% --border --preview "bat --color=always --style=numbers --line-range=:1000 {}")'
-alias new_shell='alacritty --working-directory ./ -e /usr/bin/zsh -l &'
+alias new_shell='nohup alacritty --working-directory ./ -e /usr/bin/zsh -l > /dev/null 2>&1 &'
