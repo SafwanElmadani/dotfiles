@@ -13,3 +13,9 @@ export FZF_CTRL_T_OPTS='--border --preview "bat --color=always --style=numbers -
 export FZF_CTRL_T_COMMAND='find ./ -printf "%P\\n"' #this is way faster
 #search only for directory
 export FZF_ALT_C_COMMAND='find ./ -type d -printf "%P\\n"'
+
+#add colors to the man page
+export MANPAGER="/usr/bin/most -s"
+
+#add path to local bin
+export PATH="$HOME/.local/bin:$PATH"
