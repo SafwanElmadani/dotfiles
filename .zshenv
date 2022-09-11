@@ -15,7 +15,9 @@ export FZF_CTRL_T_COMMAND='find ./ -printf "%P\\n"' #this is way faster
 export FZF_ALT_C_COMMAND='find ./ -type d -printf "%P\\n"'
 
 #add colors to the man page
-export MANPAGER="/usr/bin/most -s"
+#export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANPAGER='nvim +Man!'
 
 #add path to local bin
 export PATH="$HOME/.local/bin:$PATH"
+alias cat='bat --paging=never'
