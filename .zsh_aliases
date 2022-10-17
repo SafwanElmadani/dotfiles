@@ -34,3 +34,7 @@ source /home/safwan/.config/nvim/nvim_pop
 alias vpop='nvim_pop'
 alias fz='vpop $(find ./ -printf "%P\\n" | fzf --height 100% --border --preview "bat --color=always --style=numbers --line-range=:1000 {}")'
 alias new_shell='nohup alacritty --working-directory ./ -e /usr/bin/zsh -l > /dev/null 2>&1 &'
+
+alias lxstar7='ssh s4fw4n@lxstar7.tuc.stglabs.ibm.com -X'
+alias linx01='ssh s4fw4n@9.11.234.135 -X'
+alias legacy='ssh safwan@9.11.234.135 -X'
