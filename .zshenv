@@ -20,4 +20,3 @@ export MANPAGER='nvim +Man!'
 
 #add path to local bin
 export PATH="$HOME/.local/bin:$PATH"
-alias cat='bat --paging=never'

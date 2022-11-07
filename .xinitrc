@@ -46,6 +46,10 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 eval $(gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
 
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+eval $(gpgconf --launch gpg-agent) # start gpg-agent, if it isn't started already
+export GPG_TTY=$(tty)
+
 #export $(dbus-launch)
 #while true; do
 #   xsetroot -name "$( date +" %h %d, %Y %I:%M %p" )"
@@ -55,4 +59,3 @@ export SSH_AUTH_SOCK
 #while true; do
 exec dwm
 #done
-
