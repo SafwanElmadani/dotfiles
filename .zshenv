@@ -5,6 +5,8 @@
 #for both FZF_DEFAULT_COMMAND and FZF_CTRL_T_COMMAND
 #read the wiki https://github.com/junegunn/fzf/wiki/Configuring-shell-key-bindings
 #export FZF_DEFAULT_COMMAND='find ./ -printf "%P\\n"'
+# Use ~~ as the trigger sequence instead of the default **
+#export FZF_COMPLETION_TRIGGER='~~'
 #Options
 export FZF_DEFAULT_OPTS='--border --no-reverse --no-height'
 # To apply the command to CTRL-T as well
