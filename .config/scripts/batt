@@ -4,7 +4,8 @@ CAPA=$(cat /sys/class/power_supply/BAT0/capacity)
 STATUS=$(cat /sys/class/power_supply/BAT0/status)
 ICON1="🔋"
 ICON2="🔌"
-ICON3="⚡"
+ICON3="💡"
+#ICON3="⚡"
 
 if [ "$STATUS" = "Charging" ]; then
 
