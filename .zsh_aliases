@@ -12,12 +12,12 @@ alias tapes1='sudo mount -t cifs -o vers=2.0,username=s4fw4n,uid=1000,gid=1000 /
 
 alias drvcode='sudo mount -t cifs -o vers=2.0,username=s4fw4n,uid=1000,gid=1000 //tucgsa/projects/t/tapes1/drvcode /home/safwan/my_sandbox'
 
-alias tux11='ssh  s4fw4n@tux11.tuc.stglabs.ibm.com -X'
-alias tux15='ssh  s4fw4n@tux15.tuc.stglabs.ibm.com -X'
+alias tux11='sshpass -f /home/safwan/.ssh/gsa ssh  s4fw4n@tux11.tuc.stglabs.ibm.com -X'
+alias tux15='sshpass -f /home/safwan/.ssh/gsa ssh  s4fw4n@tux15.tuc.stglabs.ibm.com -X'
 alias v=nvim
-alias vlsi2='ssh safwan@vlsi2.tuc.stglabs.ibm.com '
+alias vlsi2='sshpass -f /home/safwan/.ssh/vlsi2 ssh safwan@vlsi2.tuc.stglabs.ibm.com '
 alias vlsi1='ssh safwan@9.11.234.59'
-alias mips04='ssh s4fw4n@tucmips04.tucson.ibm.com'
+alias mips04='sshpass -f /home/safwan/.ssh/gsa ssh s4fw4n@tucmips04.tucson.ibm.com'
 alias mount_sct_dir='sudo mount -t cifs -o vers=2.0,username=s4fw4n,uid=1000,gid=1000 //tucgsa/projects/t/tapes1/devtools/sct/se/ /home/safwan/my_sandbox'
 
 alias s4fw4n='cd /gsa/tucgsa/home/s/4/s4fw4n'
@@ -35,6 +35,6 @@ alias vpop='nvim_pop'
 alias fz='vpop $(find ./ -printf "%P\\n" | fzf --height 100% --border --preview "bat --color=always --style=numbers --line-range=:1000 {}")'
 alias new_shell='nohup alacritty --working-directory ./ -e /usr/bin/zsh -l > /dev/null 2>&1 &'
 
-alias lxstar7='ssh s4fw4n@lxstar7.tuc.stglabs.ibm.com -X'
-alias linx01='ssh  s4fw4n@9.11.234.135 -X '
+alias lxstar7='sshpass -f /home/safwan/.ssh/gsa ssh s4fw4n@lxstar7.tuc.stglabs.ibm.com -X'
+alias linx01='sshpass -f /home/safwan/.ssh/gsa ssh  s4fw4n@9.11.234.135 -X '
 alias legacy='ssh safwan@9.11.234.135 -X'
