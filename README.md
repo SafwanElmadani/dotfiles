@@ -1,1 +1,1 @@
-## My dotconfig files for PC setup
+## My dotconfig files for Archlinux PC
