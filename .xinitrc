@@ -43,7 +43,7 @@ dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XA
 
 nitrogen --restore &
 
-picom --config ~/.config/i3/picom.conf &
+picom --config /home/safwan/.config/picom.conf &
 
 /home/safwan/.local/bin/homesetup.sh &
 
