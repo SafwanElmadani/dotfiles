@@ -2,40 +2,6 @@
 alias ssh='TERM=xterm-256color ssh'
 alias ls='ls --color=auto'
 alias ll='ls -ltr --color=auto'
-alias py3.8='pyenv shell 3.8.6'
-alias ve3.8='source /home/safwan/virenv/base3.8/bin/activate'
-alias saf_dir='sudo mount -t cifs -o vers=2.0,username=s4fw4n,uid=1000,gid=1000 //tucgsa/s4fw4n ~/Documents/servers/s4fw4n && cd ~/Documents/servers/s4fw4n'
-alias sb1='sudo mount -t cifs -o vers=2.0,username=s4fw4n,uid=1000,gid=1000 //tucgsa/projects/t/tapes1/drvcode/devboxes/ext0/D3I2/pnh8A1_safwan_L7TmWork_tapedrv4328 /home/safwan/my_sandbox'
-alias sb2='sudo mount -t cifs -o vers=2.0,username=s4fw4n,uid=1000,gid=1000 //tucgsa/projects/t/tapes1/drvcode/devboxes/ext0/D3I2/se.pmg_8A1 /home/safwan/my_sandbox'
-
-alias tapes1='sudo mount -t cifs -o vers=2.0,username=s4fw4n,uid=1000,gid=1000 //tucgsa/projects/t/tapes1 /home/safwan/my_sandbox'
-
-alias drvcode='sudo mount -t cifs -o vers=2.0,username=s4fw4n,uid=1000,gid=1000 //tucgsa/projects/t/tapes1/drvcode /home/safwan/my_sandbox'
-
-alias tux11='TERM=xterm-256color sshpass -f /home/safwan/.ssh/gsa ssh  s4fw4n@tux11.tuc.stglabs.ibm.com -X'
-alias tux15='TERM=xterm-256color sshpass -f /home/safwan/.ssh/gsa ssh  s4fw4n@tux15.tuc.stglabs.ibm.com -X'
-alias alma01='TERM=xterm-256color sshpass -f /home/safwan/.ssh/gsa ssh s4fw4n@9.11.234.81'
 alias v=nvim
-alias vlsi2='TERM=xterm-256color sshpass -f /home/safwan/.ssh/vlsi2 ssh safwan@vlsi2.tuc.stglabs.ibm.com '
-alias vlsi1='ssh safwan@9.11.234.59'
-alias mips04='TERM=xterm-256color sshpass -f /home/safwan/.ssh/gsa ssh s4fw4n@tucmips04.tucson.ibm.com'
-alias mount_sct_dir='sudo mount -t cifs -o vers=2.0,username=s4fw4n,uid=1000,gid=1000 //tucgsa/projects/t/tapes1/devtools/sct/se/ /home/safwan/my_sandbox'
-
-alias s4fw4n='cd /gsa/tucgsa/home/s/4/s4fw4n'
-alias drvcode='cd /gsa/tucgsa/projects/t/tapes1/drvcode'
-alias sb='cd /gsa/tucgsa/projects/t/tapes1/drvcode/devboxes/ext0/D3I2/pnh8A1_safwan_L7TmWork_tapedrv4328'
-alias sct='cd /gsa/tucgsa/projects/t/tapes1/devtools/sct'
-alias ext0='cd /gsa/tucgsa/projects/t/tapes1/extboxes/ext0'
-alias links='cd /gsa/tucgsa/projects/t/tapes1/links'
-alias v='nvim'
-
-alias glog='git log --graph --abbrev-commit --decorate --oneline'
-
-source /home/safwan/.config/nvim/nvim_pop
-alias vpop='nvim_pop'
-alias fz='vpop $(find ./ -printf "%P\\n" | fzf --height 100% --border --preview "bat --color=always --style=numbers --line-range=:1000 {}")'
-alias new_shell='nohup alacritty --working-directory ./ -e /usr/bin/zsh -l > /dev/null 2>&1 &'
-
-alias lxstar7='TERM=xterm-256color sshpass -f /home/safwan/.ssh/gsa ssh s4fw4n@lxstar7.tuc.stglabs.ibm.com -X'
-alias linx01='TERM=xterm-256color sshpass -f /home/safwan/.ssh/gsa ssh  s4fw4n@9.11.234.135 -X '
-alias legacy='ssh safwan@9.11.234.135 -X'
+alias py3_9='pyenv shell 3.9.6'
+alias ve3_9='source ~/virenv/base3_9/bin/activate'
