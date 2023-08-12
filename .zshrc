@@ -1,68 +1,14 @@
-#export PATH="$HOME/.cargo/bin:$PATH"// moved to .zprofile
-#start neofetch
-#pfetch
-# Enable colors and change prompt:
-autoload -U colors && colors
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
-#
-# # History in cache directory:
-HISTSIZE=10000
-SAVEHIST=10000
-HISTFILE=~/.zsh_history
-
-autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-
-[[ -n "${key[Up]}"   ]] && bindkey -- "${key[Up]}"   up-line-or-beginning-search
-[[ -n "${key[Down]}" ]] && bindkey -- "${key[Down]}" down-line-or-beginning-search
-
-# Basic auto/tab complete:
-autoload -U compinit
-zstyle ':completion:*' menu select
-# Auto complete with case insenstivity
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-zstyle ':completion:*:processes' command 'NOCOLORS=1 ps -U $(whoami)|sed "/ps/d"'
-zstyle ':completion:*:processes' insert-ids menu yes select
-zstyle ':completion:*:processes-names' command 'NOCOLORS=1 ps xho command|sed "s/://g"'
-zstyle ':completion:*:processes' sort false
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots)		# Include hidden files.
-
-#vi mode
-bindkey -v
-export KEYTIMEOUT=1
-
-
-# Use vim keys in tab complete menu:
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'left' vi-backward-char
-bindkey -M menuselect 'down' vi-down-line-or-history
-bindkey -M menuselect 'up' vi-up-line-or-history
-bindkey -M menuselect 'right' vi-forward-char
-# Fix backspace bug when switching modes
-bindkey "^?" backward-delete-char
-
-
-
-
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/safwan/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
-ZSH_THEME="awesomepanda"
+ZSH_THEME="obraun"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -83,7 +29,7 @@ ZSH_THEME="awesomepanda"
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-zstyle ':omz:update' frequency 13
+# zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -124,9 +70,7 @@ zstyle ':omz:update' frequency 13
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-completions zsh-autosuggestions zsh-syntax-highlighting)
-#plugins+=(zsh-vi-mode)
-autoload -U compinit && compinit
+plugins=(git zsh-autosuggestions zsh-completions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -149,35 +93,12 @@ source $ZSH/oh-my-zsh.sh
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# users are encouraged to define aliases within the ZSH_CUSTOM folder
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#aliases
-if [ -f /home/safwan/Documents/dotfiles/.zsh_aliases ]; then
-. /home/safwan/Documents/dotfiles/.zsh_aliases
-else 
-    echo "/home/safwan/Documents/dotfiles/.zsh_aliases does not exist."
-fi
 
-
-
-
-export TMOUT=0
-eval "$(starship init zsh)"
-
-
-#python versions
-#export PYENV_ROOT="$HOME/.pyenv" // moved to .zprofile
-#export PATH="$PYENV_ROOT/bin:$PATH" // moved to .zprofile
-# eval "$(pyenv init --path)" // moved to .zprofile
-eval "$(pyenv init -)"
-
-#. /usr/share/fzf/shell/key-bindings.zsh
-
+source /home/safwan/dotfiles/.aliases
 macchina
-
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
