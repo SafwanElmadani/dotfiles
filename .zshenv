@@ -1,12 +1,9 @@
-#With:
-#ag --hidden --ignore .git -g ""
-#you don't get directory names, only file names. I decided to use:
-#find . -printf "%P\\n"
-#for both FZF_DEFAULT_COMMAND and FZF_CTRL_T_COMMAND
-#read the wiki https://github.com/junegunn/fzf/wiki/Configuring-shell-key-bindings
-#export FZF_DEFAULT_COMMAND='find ./ -printf "%P\\n"'
-# Use ~~ as the trigger sequence instead of the default **
-#export FZF_COMPLETION_TRIGGER='~~'
+. "$HOME/.cargo/env"
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 #Options
 export FZF_DEFAULT_OPTS='--border --no-reverse --no-height'
 # To apply the command to CTRL-T as well
@@ -21,4 +18,4 @@ export FZF_ALT_C_COMMAND='find ./ -type d -printf "%P\\n"'
 export MANPAGER='nvim +Man!'
 
 #add path to local bin
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="/home/safwan/.local/bin:$PATH"
