@@ -19,3 +19,8 @@ export MANPAGER='nvim +Man!'
 
 #add path to local bin
 export PATH="/home/safwan/.local/bin:$PATH"
+
+export EDITOR=nvim
+
+#path for texlive binaries
+export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"
