@@ -6,7 +6,8 @@
 }
 
 window#waybar {
-    background-color: rgba(60,56,54, 1);
+    /*background-color: rgba(60,56,54, 1);*/
+    background-color: transparent;
     /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
     color: #fbf1c7;
     transition-property: background-color;
@@ -14,8 +15,13 @@ window#waybar {
     margin-top: 50px;
 }
 
-.modules-left{
-    color: green;
+.modules-left,
+.modules-center,
+.modules-right{
+    background-color: rgba(60,56,54, 1);
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px; /* All corners rounded */
 }
 
 
@@ -24,6 +30,7 @@ window#waybar {
     background-color: transparent;
     color: #fbf1c7;
     border: none;
+    margin-left: 5px;
 }
 
 #workspaces button:hover {
@@ -32,8 +39,12 @@ window#waybar {
 }
 
 #workspaces button.active {
+    padding: 0 5px;
     background-color: #7c6f64;
     color: #d79921;
+    border-radius: 10px; /* All corners rounded */
+    border: none;
+    margin-left: 5px;
 }
 
 #workspaces button.urgent {
@@ -61,10 +72,6 @@ window#waybar {
     color: #ffffff;
 }
 
-#window,
-#workspaces {
-    margin: 0 4px;
-}
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
