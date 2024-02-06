@@ -6,31 +6,40 @@
 }
 
 window#waybar {
-    /*background-color: rgba(60,56,54, 1);*/
     background-color: transparent;
     /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
     color: #fbf1c7;
     transition-property: background-color;
     transition-duration: .5s;
-    margin-top: 50px;
 }
+window > box {
+    background-color: rgba(60,56,54, 1);
+    border-radius: 10px; /* All corners rounded */
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border: 2.7px solid rgba(138, 173, 244, 0.5);
+}
+
 
 .modules-left,
-.modules-center,
 .modules-right{
     background-color: rgba(60,56,54, 1);
-    margin: 10px;
-    padding: 5px;
+    margin: 10px 10px 0px 10px;
     border-radius: 10px; /* All corners rounded */
 }
-
+.modules-center{
+    background-color: rgba(60,56,54, 1);
+    margin: 10px 10px 0px 10px;
+    padding: 0 10px;
+    border-radius: 10px; /* All corners rounded */
+}
 
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
     color: #fbf1c7;
     border: none;
-    margin-left: 5px;
 }
 
 #workspaces button:hover {
@@ -39,12 +48,10 @@ window#waybar {
 }
 
 #workspaces button.active {
-    padding: 0 5px;
     background-color: #7c6f64;
     color: #d79921;
     border-radius: 10px; /* All corners rounded */
     border: none;
-    margin-left: 5px;
 }
 
 #workspaces button.urgent {
@@ -70,6 +77,7 @@ window#waybar {
 #mpd {
     padding: 0 10px;
     color: #ffffff;
+    border-radius: 10px; /* All corners rounded */
 }
 
 
@@ -84,7 +92,7 @@ window#waybar {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: red;
 }
 
 #battery {
