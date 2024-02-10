@@ -6,34 +6,33 @@
 }
 
 window#waybar {
-    /*background-color: transparent;*/
-    background-color: red;
+    background-color: transparent;
     /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
     color: #fbf1c7;
     transition-property: background-color;
     transition-duration: .5s;
 }
 window > box {
-    background-color: rgba(60,56,54, 1);
+    /*background-color: rgba(60,56,54, 1);*/
+    background-color: transparent;
     border-radius: 10px; /* All corners rounded */
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px; /*need to remove this have smaller top gas with windows*/
-    border: 2.7px solid rgba(138, 173, 244, 0.5);
+    margin-top: 5px;
+    /*margin-bottom: 10px; need to remove this have smaller top gas with windows*/
+    /*border: 2.7px solid rgba(138, 173, 244, 0.5);*/
 }
 
 
 .modules-left,
 .modules-right{
     background-color: rgba(60,56,54, 1);
-    margin: 5px;
+    padding: 5px 5px;
     border-radius: 10px; /* All corners rounded */
 }
 .modules-center{
     background-color: rgba(60,56,54, 1);
-    margin: 5px;
-    padding: 0 10px;
+    padding: 5px 5px;
     border-radius: 10px; /* All corners rounded */
 }
 
@@ -76,6 +75,7 @@ window > box {
 #mode,
 #idle_inhibitor,
 #scratchpad,
+#idle_inhibitor,
 #mpd {
     padding: 0 10px;
     color: #3c3836;
@@ -95,6 +95,8 @@ window > box {
 }
 
 #clock {
+    background-color: transparent;
+    color: #fbf1c7;
 }
 
 #battery {
@@ -132,7 +134,6 @@ label:focus {
 }
 
 #disk {
-    background-color: #964B00;
 }
 
 #backlight {
@@ -185,6 +186,7 @@ label:focus {
 }
 
 #tray {
+    background-color: transparent;
 }
 
 #tray > .passive {
@@ -197,12 +199,9 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
 }
 
 #mpd {
@@ -247,4 +246,9 @@ label:focus {
 
 #scratchpad.empty {
 	background-color: transparent;
+}
+
+#window {  /*the title window*/
+    padding-left: 20px;
+    padding-right: 10px;
 }
