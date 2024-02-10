@@ -36,6 +36,12 @@ window > box {
     border-radius: 10px; /* All corners rounded */
 }
 
+#workspaces {
+    border: 2px solid #a89984;
+    border-radius: 5px; /* All corners rounded */
+    padding: 2px;
+
+}
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
@@ -49,8 +55,8 @@ window > box {
 }
 
 #workspaces button.active {
-    background-color: #7c6f64;
-    color: #d79921;
+    background-color: #a89984;
+    color: #3c3836;
     border-radius: 5px; /* All corners rounded */
     border: none;
 }
@@ -78,9 +84,11 @@ window > box {
 #idle_inhibitor,
 #mpd {
     padding: 0 10px;
-    color: #3c3836;
+    /*color: #3c3836;*/
     border-radius: 5px; /* All corners rounded */
-    background-color: #a89984;
+    /*background-color: #a89984;*/
+    border: 2px solid #a89984;
+
 }
 
 
@@ -249,6 +257,7 @@ label:focus {
 }
 
 #window {  /*the title window*/
-    padding-left: 20px;
-    padding-right: 10px;
+    border: 2px solid #a89984;
+    border-radius: 5px; /* All corners rounded */
+    padding: 2px;
 }
