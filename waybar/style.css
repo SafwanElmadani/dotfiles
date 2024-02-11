@@ -82,6 +82,7 @@ window > box {
 #idle_inhibitor,
 #scratchpad,
 #idle_inhibitor,
+#keyboard-state,
 #mpd {
     padding: 0 8px;
     /*color: #3c3836;*/
@@ -219,9 +220,7 @@ label:focus {
 #mpd.stopped {
 }
 
-#mpd.paused {
-}
-
+#mpd.paused { }
 #language {
     background: #00b093;
     color: #740864;
@@ -231,19 +230,12 @@ label:focus {
 }
 
 #keyboard-state {
-    background: #97e1ad;
-    color: #000000;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
 }
 
 #keyboard-state > label {
-    padding: 0 5px;
 }
 
 #keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
 }
 
 #scratchpad {
@@ -258,4 +250,10 @@ label:focus {
     border: 2px solid #a89984;
     border-radius: 5px; /* All corners rounded */
     padding: 2px;
+}
+/* make window module transparent when no windows present */
+window#waybar.empty #window {
+    background-color: transparent;
+    border: none;
+    padding: 0;
 }
