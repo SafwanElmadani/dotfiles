@@ -108,11 +108,10 @@ window > box {
 }
 
 #battery {
-    color: #000000;
+
 }
 
 #battery.charging, #battery.plugged {
-    color: #ffffff;
 }
 
 @keyframes blink {
@@ -123,7 +122,6 @@ window > box {
 }
 
 #battery.critical:not(.charging) {
-    color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
