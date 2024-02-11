@@ -4,12 +4,12 @@
     "height": 30, // Waybar height (to be removed for auto height)
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
-    "modules-right": ["custom/media", "idle_inhibitor", "pulseaudio", "disk", "memory", "cpu", "tray", "keyboard-state"],
+    "modules-right": ["custom/media", "idle_inhibitor", "pulseaudio", "disk", "memory", "cpu", "keyboard-state", "tray", ],
     "modules-center": ["clock"],
 
     // Modules configuration
     "hyprland/window": {
-        "format": "👉 {}",
+        "format": "{}",
         "max-length": 40,
         "separate-outputs": true,
         "on-click": "dunstify \"$(hyprctl activewindow -j | jq -r .title)\""
@@ -36,12 +36,12 @@
         }
     },
     "keyboard-state": {
-        "numlock": true,
+        "numlock": false,
         "capslock": true,
         "format": "{name} {icon}",
         "format-icons": {
             "locked": "",
-            "unlocked": ""
+            "unlocked": ""
         }
     },
     "mpd": {
