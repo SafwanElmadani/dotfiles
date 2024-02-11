@@ -83,7 +83,7 @@ window > box {
 #scratchpad,
 #idle_inhibitor,
 #mpd {
-    padding: 0 10px;
+    padding: 0 8px;
     /*color: #3c3836;*/
     border-radius: 5px; /* All corners rounded */
     /*background-color: #a89984;*/
@@ -173,9 +173,7 @@ label:focus {
 }
 
 #custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 100px;
+    min-width: 80px;
 }
 
 #custom-media.custom-spotify {
