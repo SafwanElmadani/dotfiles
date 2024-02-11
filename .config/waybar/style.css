@@ -1,76 +1,70 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    /*font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif; */
+    font-family: "JetBrainsMono Nerd Font", FontAwesome;
+    font-size: 16px;
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-    color: #ffffff;
+    background-color: transparent;
+    /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
+    color: #fbf1c7;
     transition-property: background-color;
     transition-duration: .5s;
 }
-
-window#waybar.hidden {
-    opacity: 0.2;
-}
-
-/*
-window#waybar.empty {
+window > box {
+    /*background-color: rgba(60,56,54, 1);*/
     background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
-window#waybar.termite {
-    background-color: #3F3F3F;
+    border-radius: 10px; /* All corners rounded */
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    /*margin-bottom: 10px; need to remove this have smaller top gas with windows*/
+    /*border: 2.7px solid rgba(138, 173, 244, 0.5);*/
 }
 
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
+
+.modules-left,
+.modules-right{
+    background-color: rgba(60,56,54, 1);
+    padding: 5px 5px;
+    border-radius: 10px; /* All corners rounded */
+}
+.modules-center{
+    background-color: rgba(60,56,54, 1);
+    padding: 5px 5px;
+    border-radius: 10px; /* All corners rounded */
 }
 
-button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
-    border: none;
-    border-radius: 0;
-}
+#workspaces {
+    border: 2px solid #a89984;
+    border-radius: 5px; /* All corners rounded */
+    padding: 2px;
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-    background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
 }
-
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #ffffff;
+    color: #fbf1c7;
+    border: none;
 }
 
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    padding: 0 5px;
+    border: none;
 }
 
 #workspaces button.active {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+    background-color: #a89984;
+    color: #3c3836;
+    border-radius: 5px; /* All corners rounded */
+    border: none;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: #cc241d;
 }
 
-#mode {
-    background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
-}
 
 #clock,
 #battery,
@@ -87,15 +81,16 @@ button:hover {
 #mode,
 #idle_inhibitor,
 #scratchpad,
+#idle_inhibitor,
 #mpd {
-    padding: 0 10px;
-    color: #ffffff;
+    padding: 0 8px;
+    /*color: #3c3836;*/
+    border-radius: 5px; /* All corners rounded */
+    /*background-color: #a89984;*/
+    border: 2px solid #a89984;
+
 }
 
-#window,
-#workspaces {
-    margin: 0 4px;
-}
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
@@ -108,17 +103,16 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: transparent;
+    color: #fbf1c7;
 }
 
 #battery {
-    background-color: #ffffff;
     color: #000000;
 }
 
 #battery.charging, #battery.plugged {
     color: #ffffff;
-    background-color: #26A65B;
 }
 
 @keyframes blink {
@@ -129,7 +123,6 @@ button:hover {
 }
 
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
     color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -143,16 +136,12 @@ label:focus {
 }
 
 #cpu {
-    background-color: #2ecc71;
-    color: #000000;
 }
 
 #memory {
-    background-color: #9b59b6;
 }
 
 #disk {
-    background-color: #964B00;
 }
 
 #backlight {
@@ -160,7 +149,6 @@ label:focus {
 }
 
 #network {
-    background-color: #2980b9;
 }
 
 #network.disconnected {
@@ -168,8 +156,6 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
 }
 
 #pulseaudio.muted {
@@ -187,9 +173,7 @@ label:focus {
 }
 
 #custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 100px;
+    min-width: 80px;
 }
 
 #custom-media.custom-spotify {
@@ -201,7 +185,6 @@ label:focus {
 }
 
 #temperature {
-    background-color: #f0932b;
 }
 
 #temperature.critical {
@@ -209,7 +192,7 @@ label:focus {
 }
 
 #tray {
-    background-color: #2980b9;
+    background-color: transparent;
 }
 
 #tray > .passive {
@@ -222,29 +205,21 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
 }
 
 #mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
 }
 
 #mpd.disconnected {
-    background-color: #f53c3c;
 }
 
 #mpd.stopped {
-    background-color: #90b1b1;
 }
 
 #mpd.paused {
-    background-color: #51a37a;
 }
 
 #language {
@@ -278,3 +253,10 @@ label:focus {
 #scratchpad.empty {
 	background-color: transparent;
 }
+
+#window {  /*the title window*/
+    border: 2px solid #a89984;
+    border-radius: 5px; /* All corners rounded */
+    padding: 2px;
+}
+
