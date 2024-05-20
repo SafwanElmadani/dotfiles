@@ -3,11 +3,14 @@
 # find waybar process ids
 BAR1=$(pgrep -fx "waybar")
 BAR2=$(pgrep -f "waybar -c /home/safwan/.config/waybar/config_mon_2")
+BAR3=$(pgrep -f "waybar -c /home/safwan/.config/waybar/config_mon_3")
 
 activeMonitor=$(hyprctl activeworkspace -j | jq -r '.monitor')
 
-if [[ "$activeMonitor" == "DP-3" ]] && [[ -n $BAR2 ]]; then
+if [[ "$activeMonitor" == "HDMI-A-1" ]] && [[ -n $BAR2 ]]; then
     kill -SIGUSR1 "$BAR2"
 elif [[ "$activeMonitor" == "DP-1" ]] && [[ -n $BAR1 ]]; then
     kill -SIGUSR1 "$BAR1"
+elif [[ "$activeMonitor" == "DP-3" ]] && [[ -n $BAR3 ]]; then
+    kill -SIGUSR1 "$BAR3"
 fi
