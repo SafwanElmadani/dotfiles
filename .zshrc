@@ -101,4 +101,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source /home/safwan/dotfiles/.aliases
+source /home/safwan/wd_ssd/python_envs/main/bin/activate
+
+#Android sdk
+export ANDROID_HOME=/home/safwan/wd_ssd/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 macchina

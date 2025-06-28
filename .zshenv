@@ -24,3 +24,11 @@ export EDITOR=nvim
 
 #path for texlive binaries
 export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"
+
+export OLLAMA_MODELS="/home/safwan/wd_ssd/ollama/models"
+export PIPX_HOME="/home/safwan/wd_ssd/pipx"
+
+# export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+
+# source /home/safwan/wd_ssd/python_envs/main/bin/activate
