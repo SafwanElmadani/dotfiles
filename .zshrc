@@ -101,10 +101,22 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source /home/safwan/dotfiles/.aliases
-source /home/safwan/wd_ssd/python_envs/main/bin/activate
+# source /home/safwan/wd_ssd/python_envs/main/bin/activate
 
 #Android sdk
 export ANDROID_HOME=/home/safwan/wd_ssd/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+export UV_CACHE_DIR=/home/safwan/wd_ssd/python_envs/.cache/uv
+
+export _ZO_DATA_DIR=/home/safwan/wd_ssd/zoxide
+eval "$(zoxide init zsh)"
+
+# Base XDG paths
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+
+
 macchina
